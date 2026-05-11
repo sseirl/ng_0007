@@ -29,7 +29,7 @@ function Contact() {
     setStatus('sending');
 
   try {
-  const response = await fetch('https://nurgruz-backend.onrender.com/api/send-order', {
+  const response = await fetch('https://nurgruz-server.onrender.com/api/send-order', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
