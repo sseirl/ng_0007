@@ -28,12 +28,12 @@ function Contact() {
     e.preventDefault();
     setStatus('sending');
 
-    try {
-      const response = await fetch('http://localhost:5000/api/send-order', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
+  try {
+  const response = await fetch('https://nurgruz-backend.onrender.com/api/send-order', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  });
 
       const data = await response.json();
 
