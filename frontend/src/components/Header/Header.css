@@ -107,3 +107,86 @@
   color: transparent;
   letter-spacing: -0.5px;
 }
+
+/* Добавь эти стили в конец файла Header.css */
+
+/* Бургер-иконка */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #ff7f00;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 70px);
+    background: white;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+    transition: 0.3s;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    z-index: 99;
+  }
+
+  .nav.open {
+    left: 0;
+  }
+
+  .nav a, .nav .dropdown {
+    font-size: 18px;
+    padding: 12px 0;
+    width: 100%;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-call-btn {
+    display: block;
+    background: #ff7f00;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 40px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-call-btn {
+    display: none;
+  }
+}

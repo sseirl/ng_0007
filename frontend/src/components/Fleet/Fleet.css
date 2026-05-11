@@ -139,69 +139,43 @@
   box-shadow: 0 5px 15px rgba(255, 127, 0, 0.3);
 }
 
-@media (max-width: 1200px) {
-  .fleet-container {
-    max-width: 1100px;
-  }
-  
-  .fleet-title {
-    font-size: 42px;
-  }
-  
-  .fleet-name {
-    font-size: 18px;
-  }
-  
-  .fleet-specs {
-    font-size: 13px;
-  }
-  
-  .fleet-image {
-    height: 200px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .fleet-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-  
-  .fleet-title {
-    font-size: 38px;
-  }
-}
-
 @media (max-width: 768px) {
   .fleet {
     padding: 60px 0;
   }
+  
   .fleet-container {
     padding: 0 24px;
   }
+  
   .fleet-title {
     font-size: 32px;
   }
+  
   .fleet-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 16px;
     margin-top: 40px;
   }
   
+  .fleet-card-inner {
+    padding: 12px;
+  }
+  
   .fleet-image {
-    height: 200px;
+    height: 120px;
   }
   
   .fleet-name {
-    font-size: 18px;
-  }
-  
-  .fleet-specs {
     font-size: 14px;
   }
   
+  .fleet-specs {
+    font-size: 10px;
+  }
+  
   .fleet-btn {
-    padding: 10px 0;
-    font-size: 15px;
+    padding: 8px 0;
+    font-size: 12px;
   }
 }
