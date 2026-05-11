@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 const TELEGRAM_BOT_TOKEN = '8509739110:AAFRfSlRo5abxIoG8zy512JVKLFdL2DllbI';
-const TELEGRAM_CHAT_ID = '5095734417'; // ⚠️ ЗАМЕНИ НА СВОЙ (через @userinfobot)
+const TELEGRAM_CHAT_ID = '5409340119'; 
 
 app.get('/api/send-order', (req, res) => {
   res.json({ message: 'Сервер работает. Используйте POST для отправки заявки.' });
