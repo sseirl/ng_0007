@@ -1,0 +1,114 @@
+.about {
+  padding: 100px 0;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.about-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-text {
+  order: 1;
+}
+
+.about-image {
+  order: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Остальные стили оставляем как есть */
+.about-title {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.about-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff7f00;
+  margin-top: 12px;
+  border-radius: 2px;
+}
+
+.about-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-features {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #ff7f00;
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-title {
+    font-size: 32px;
+  }
+  .about-container {
+    padding: 0 24px;
+  }
+  .about {
+    padding: 60px 0;
+  }
+  .about-image img {
+    max-width: 100%;
+  }
+}
