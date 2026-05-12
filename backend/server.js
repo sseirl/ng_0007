@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 const TELEGRAM_BOT_TOKEN = '8509739110:AAFRfSlRo5abxIoG8zy512JVKLFdL2DllbI';
-const TELEGRAM_CHAT_ID = '5409340119';  // ЗАМЕНИ НА СВОЙ ID (число от @userinfobot)
+const TELEGRAM_CHAT_ID = '5409340119';  
 
 app.get('/api/send-order', (req, res) => {
   res.json({ message: 'Сервер работает. Используйте POST.' });
@@ -15,7 +15,7 @@ app.get('/api/send-order', (req, res) => {
 app.post('/api/send-order', async (req, res) => {
   const { name, phone, service, comment } = req.body;
 
-  const message = `🆕 НОВАЯ ЗАЯВКА\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n📋 Услуга: ${service}\n💬 Комментарий: ${comment || '—'}`;
+  const message = `🆕 НОВАЯ ЗАЯВКА\n\n Имя: ${name}\n Телефон: ${phone}\n Услуга: ${service}\n💬 Комментарий: ${comment || '—'}`;
 
   try {
     const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
