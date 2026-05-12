@@ -6,6 +6,7 @@ import Services from './components/Services/Services';
 import Fleet from './components/Fleet/Fleet';
 import Reviews from './components/Reviews/Reviews';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Fleet />
       <Reviews />
       <Contact />
+      <Footer />
     </div>
   );
 }
